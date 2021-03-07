@@ -1,2 +1,2 @@
-# vaadin-timeu-wizard
-Wizard component based on timeu-wizard for vaadin 17+
+# vaadin-paper-input-place
+Google API Autocomplete component based on paper-input-place for vaadin 17+
