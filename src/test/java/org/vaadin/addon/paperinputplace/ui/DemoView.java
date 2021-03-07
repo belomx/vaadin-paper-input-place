@@ -20,7 +20,7 @@ public class DemoView extends VerticalLayout
         div.getStyle().set("flex-direction", "column");
         div.add(new Label("Paper input place by google api"));
         
-        PaperInputPlace inputPlace = new PaperInputPlace("AIzaSyCLypeI6z_2Bw9So7P_dLwe3xWemzargpI");
+        PaperInputPlace inputPlace = new PaperInputPlace("API-KEY");
         inputPlace.setCountry("DE");
         final Label selectedValueLabel = new Label("place selected");
         div.add(inputPlace, selectedValueLabel);
