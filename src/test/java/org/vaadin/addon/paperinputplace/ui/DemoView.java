@@ -18,15 +18,21 @@ public class DemoView extends VerticalLayout
     {
         FlexLayout div = new FlexLayout();
         div.getStyle().set("flex-direction", "column");
+        div.setWidth("40em");
         div.add(new Label("Paper input place by google api"));
         
-        PaperInputPlace inputPlace = new PaperInputPlace("API-KEY");
+        PaperInputPlace inputPlace = new PaperInputPlace("YOUR-API-key");
+        inputPlace.setWidth("100%");
         inputPlace.setCountry("DE");
+        inputPlace.setLanguage("de");
+        inputPlace.setErrorMessage(null);
         final Label selectedValueLabel = new Label("place selected");
         div.add(inputPlace, selectedValueLabel);
         
         inputPlace.addChangePlacejsonCompleteEventListener(e -> {
-            selectedValueLabel.setText(e.getSource().getPlace());
+            e.getSource().getPlaceResponse().ifPresent(response -> {
+                selectedValueLabel.setText(response.toString());
+            });
         });
         
         add(div);
