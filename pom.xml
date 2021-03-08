@@ -5,7 +5,7 @@
 
     <groupId>org.vaadin.addon</groupId>
     <artifactId>vaadin-paper-input-place</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>paper-input-place component</name>
