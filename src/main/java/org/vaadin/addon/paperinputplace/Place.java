@@ -33,9 +33,24 @@ public class Place implements Serializable {
         this.latLng = latLng;
     }
 
+    /**
+     * @return the viewport
+     */
+    public Viewport getViewport() {
+        return viewport;
+    }
+
+    /**
+     * @param viewport
+     */
+    public void setViewport(Viewport viewport) {
+        this.viewport = viewport;
+    }
+
     private String name;
 
     private GlobalLocation latLng;
 
+    private Viewport viewport;
 
 }
