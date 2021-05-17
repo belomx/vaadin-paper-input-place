@@ -1,4 +1,4 @@
-package org.vaadin.addon.paperinputplace;
+package org.vaadin.addons.belomx.paperinputplace;
 
 public class Viewport {
     

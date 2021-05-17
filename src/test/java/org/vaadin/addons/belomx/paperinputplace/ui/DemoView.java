@@ -1,12 +1,12 @@
-package org.vaadin.addon.paperinputplace.ui;
-
-import org.vaadin.addon.paperinputplace.PaperInputPlace;
+package org.vaadin.addons.belomx.paperinputplace.ui;
 
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
+
+import org.vaadin.addons.belomx.paperinputplace.PaperInputPlace;
 
 @SuppressWarnings("serial")
 @Route("")
@@ -21,7 +21,7 @@ public class DemoView extends VerticalLayout
         div.setWidth("40em");
         div.add(new Label("Paper input place by google api"));
         
-        PaperInputPlace inputPlace = new PaperInputPlace("YOUR-API-key");
+        PaperInputPlace inputPlace = new PaperInputPlace("API-KEY");
         inputPlace.setWidth("100%");
         inputPlace.setCountry("DE");
         inputPlace.setLanguage("de");
