@@ -17,7 +17,7 @@ public class Place implements Serializable {
      */
     public void setName(String name) {
         this.name = name;
-    }
+    }    
 
     /**
      * @return the latLng
@@ -51,6 +51,6 @@ public class Place implements Serializable {
 
     private GlobalLocation latLng;
 
-    private Viewport viewport;
+    private Viewport viewport;    
 
 }

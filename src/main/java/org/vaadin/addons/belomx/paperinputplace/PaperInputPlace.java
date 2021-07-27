@@ -21,7 +21,7 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.shared.Registration;
 
 @Tag("paper-input-place")
-@NpmPackage(value = "@belomx/paper-input-place", version = "^2.0.7")
+@NpmPackage(value = "@belomx/paper-input-place", version = "^2.0.8")
 @JsModule("@belomx/paper-input-place/paper-input-place.js")
 
 public class PaperInputPlace extends AbstractSinglePropertyField<PaperInputPlace, String> implements HasStyle, HasText, HasEnabled, HasSize {    
@@ -103,6 +103,14 @@ public class PaperInputPlace extends AbstractSinglePropertyField<PaperInputPlace
         if(geoReady) {
             getElement().executeJs(comm, placeString);
         }        
+    }
+
+    @Override
+    public void setValue(String placeString)
+    {
+        super.setValue(placeString);
+        String comm = "this._value = $0";
+        getElement().executeJs(comm, placeString);        
     }
     
     public String getPlace()

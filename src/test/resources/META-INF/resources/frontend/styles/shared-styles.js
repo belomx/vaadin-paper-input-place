@@ -5,15 +5,9 @@ const $_documentContainer = document.createElement('template');
 
 $_documentContainer.innerHTML = `
 
-<dom-module id="wizard" theme-for="vaadin-timeu-wizard">
+<dom-module id="input-place" theme-for="paper-input-place">
   <template>
-    <style>      
-      :host(.wizardsConfig) timeu-wizard {
-	    --timeu-wizard-active-color: red;
-      }
-      :host(.wizardsConfig) timeu-wizard {
-        --timeu-wizard-step-font-family: vaadin;
-      }
+    <style>
     </style>
   </template>
 </dom-module>

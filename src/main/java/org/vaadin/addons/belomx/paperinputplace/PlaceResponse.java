@@ -5,7 +5,23 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class PlaceResponse implements Serializable {       
     
-    private Place place;     
+    private Place place;
+
+    private Address address;
+
+    /**
+     * @return get the address
+     */
+    public Address getAddress() {
+        return address;
+    }
+
+    /**
+     * @param address
+     */
+    public void setAddress(Address address) {
+        this.address = address;
+    }
 
     /**
      * @return the place
@@ -23,7 +39,14 @@ public class PlaceResponse implements Serializable {
     
     @Override
     public String toString() {
-        return "{ \"place\": {\"name\":\""+this.getPlace().getName()+"\",\"latLng\":{\"lat\":"+this.getPlace().getLatLng().getLat()+" ,\"long\":"+this.getPlace().getLatLng().getLng()+"}, \"viewport\": { \"northeast\": {\"lat\":"+this.getPlace().getViewport().getNortheast().getLat()+" ,\"long\":"+this.getPlace().getViewport().getNortheast().getLng()+"}, \"southeast\":{\"lat\":"+this.getPlace().getViewport().getSouthwest().getLat()+" ,\"long\":"+this.getPlace().getViewport().getSouthwest().getLng()+"} }}}";
+        return "{\"address\": "+getStringAddress()+" , \"place\": {\"name\":\""+this.getPlace().getName()+"\",\"latLng\":{\"lat\":"+this.getPlace().getLatLng().getLat()+" ,\"long\":"+this.getPlace().getLatLng().getLng()+"}, \"viewport\": { \"northeast\": {\"lat\":"+this.getPlace().getViewport().getNortheast().getLat()+" ,\"long\":"+this.getPlace().getViewport().getNortheast().getLng()+"}, \"southeast\":{\"lat\":"+this.getPlace().getViewport().getSouthwest().getLat()+" ,\"long\":"+this.getPlace().getViewport().getSouthwest().getLng()+"} }}}";
+    }
+
+    private String getStringAddress() {
+        if (getAddress() == null) {
+            return "";
+        }
+        return getAddress().toString();
     }
 
 }
