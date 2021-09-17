@@ -9,7 +9,6 @@ import com.vaadin.flow.component.ComponentEvent;
 import com.vaadin.flow.component.ComponentEventListener;
 import com.vaadin.flow.component.DomEvent;
 import com.vaadin.flow.component.EventData;
-import com.vaadin.flow.component.HasEnabled;
 import com.vaadin.flow.component.HasSize;
 import com.vaadin.flow.component.HasStyle;
 import com.vaadin.flow.component.HasText;
@@ -21,13 +20,13 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.shared.Registration;
 
 @Tag("paper-input-place")
-@NpmPackage(value = "@belomx/paper-input-place", version = "^2.0.9")
+@NpmPackage(value = "@belomx/paper-input-place", version = "^2.0.10")
 @JsModule("@belomx/paper-input-place/paper-input-place.js")
 
-public class PaperInputPlace extends AbstractSinglePropertyField<PaperInputPlace, String> implements HasStyle, HasText, HasEnabled, HasSize {    
+public class PaperInputPlace extends AbstractSinglePropertyField<PaperInputPlace, String> implements HasStyle, HasText, HasSize {    
     private static final String NOT_SET = "not set";
     private static final long serialVersionUID = 1L;
-    private static final PropertyDescriptor<String,String> placeJSON = PropertyDescriptors.propertyWithDefault("placeJSON", "not entered");
+    private static final PropertyDescriptor<String,String> placeJSON = PropertyDescriptors.propertyWithDefault("placeJSON", NOT_SET);
     private static boolean geoReady = false;
     
     public PaperInputPlace(String k) {
