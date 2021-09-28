@@ -20,7 +20,7 @@ import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.shared.Registration;
 
 @Tag("paper-input-place")
-@NpmPackage(value = "@belomx/paper-input-place", version = "^2.0.10")
+@NpmPackage(value = "@belomx/paper-input-place", version = "^2.0.11")
 @JsModule("@belomx/paper-input-place/paper-input-place.js")
 
 public class PaperInputPlace extends AbstractSinglePropertyField<PaperInputPlace, String> implements HasStyle, HasText, HasSize {    
